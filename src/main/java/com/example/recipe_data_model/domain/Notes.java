@@ -35,5 +35,6 @@ public class Notes {
 
     public void setRecipe(Recipe recipe) {
         this.recipe = recipe;
+
     }
 }
