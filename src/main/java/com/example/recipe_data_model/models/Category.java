@@ -1,6 +1,7 @@
 package com.example.recipe_data_model.models;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Category {
@@ -9,8 +10,8 @@ public class Category {
     private long id;
     private String departmentName;
 
-//    @ManyToMany
-    private Recipe recipe;
+    @ManyToMany(mappedBy = "categories")
+    private Set<Recipe> recipe;
 
     public long getId() {
         return id;
@@ -28,11 +29,11 @@ public class Category {
         this.departmentName = departmentName;
     }
 
-    public Recipe getRecipe() {
+    public Set<Recipe> getRecipe() {
         return recipe;
     }
 
-    public void setRecipe(Recipe recipe) {
+    public void setRecipe(Set<Recipe> recipe) {
         this.recipe = recipe;
     }
 }
