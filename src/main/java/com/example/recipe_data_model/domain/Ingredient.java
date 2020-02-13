@@ -1,4 +1,4 @@
-package com.example.recipe_data_model.models;
+package com.example.recipe_data_model.domain;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -11,7 +11,7 @@ public class Ingredient {
     private String description;
     private BigDecimal amount;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     private UnitOfMeasure unitOfMeasure;
     @ManyToOne
     private Recipe recipe;

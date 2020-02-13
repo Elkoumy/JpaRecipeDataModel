@@ -1,4 +1,4 @@
-package com.example.recipe_data_model.models;
+package com.example.recipe_data_model.domain;
 
 import javax.persistence.*;
 

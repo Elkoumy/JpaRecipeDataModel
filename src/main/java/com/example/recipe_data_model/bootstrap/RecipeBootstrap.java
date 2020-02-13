@@ -1,6 +1,6 @@
 package com.example.recipe_data_model.bootstrap;
 
-import com.example.recipe_data_model.models.*;
+import com.example.recipe_data_model.domain.*;
 import com.example.recipe_data_model.repositories.CategoryRepository;
 import com.example.recipe_data_model.repositories.RecipeRepository;
 import com.example.recipe_data_model.repositories.UnitOfMeasureRepository;

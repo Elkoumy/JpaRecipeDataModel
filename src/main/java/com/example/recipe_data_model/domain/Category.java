@@ -1,4 +1,4 @@
-package com.example.recipe_data_model.models;
+package com.example.recipe_data_model.domain;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -8,7 +8,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String departmentName;
+    private String description;
 
     @ManyToMany(mappedBy = "categories")
     private Set<Recipe> recipe;
@@ -21,12 +21,12 @@ public class Category {
         this.id = id;
     }
 
-    public String getDepartmentName() {
-        return departmentName;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDepartmentName(String departmentName) {
-        this.departmentName = departmentName;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Set<Recipe> getRecipe() {

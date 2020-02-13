@@ -1,4 +1,4 @@
-package com.example.recipe_data_model.models;
+package com.example.recipe_data_model.domain;
 
 import javax.persistence.*;
 
@@ -7,7 +7,7 @@ public class UnitOfMeasure {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String uom;
+    private String description;
 
     @OneToOne
     private Ingredient ingredient;
@@ -20,12 +20,12 @@ public class UnitOfMeasure {
         this.id = id;
     }
 
-    public String getUom() {
-        return uom;
+    public String getDescription() {
+        return description;
     }
 
-    public void setUom(String uom) {
-        this.uom = uom;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Ingredient getIngredient() {
