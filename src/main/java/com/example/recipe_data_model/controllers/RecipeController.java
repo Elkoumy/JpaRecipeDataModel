@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RecipeController {
 
     private final RecipeService recipeService;
-
     public RecipeController(RecipeService recipeService) {
         this.recipeService = recipeService;
     }
